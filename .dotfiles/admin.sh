@@ -246,9 +246,6 @@ function configure-mac() {
     echo "installing Visual Studio Code";
     brew install --cask visual-studio-code;
 
-    echo "installing VS Code settings.json"
-    cp settings.json "$HOME/Library/Application Support/Code/User/settings.json"
-
     echo "installing VSCode Extensions"
     xargs code --install-extension < extensions.vscode;
 
@@ -285,7 +282,7 @@ function configure-mac() {
     echo "- set inactivity logout/sleep settings";
 
     echo "## Configure Firefox";
-    echo "- copy user.json to FireFox profile folder: $HOME/Library/Application Support/Firefox/Profiles/xxxxx.default";
+    echo "- copy user.js to FireFox profile folder: $HOME/Library/Application Support/Firefox/Profiles/xxxxx.default";
     echo "- install extensions listed in extensions.firefox"
     echo "- copy over Bookmarks"
     echo "- set default web browser to Firefox (System Preferences > General)";

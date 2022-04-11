@@ -1,5 +1,11 @@
 # Dotfiles
 
+## TODO
+
+- put user.js automatically in the correct folder
+- paste Quokka + Wallaby license into .quokka/.qlc and .wallaby/key.lic
+- handle ssh keys and .ssh/config
+
 # Bootstrap
 
 - install git

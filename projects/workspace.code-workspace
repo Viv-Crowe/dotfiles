@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"explorer.confirmDragAndDrop": false,
+		"explorer.confirmDelete": false,
+		"window.zoomLevel": 1,
+		"editor.minimap.enabled": false,
+		"files.autoSaveDelay": 5000,
+		"files.trimTrailingWhitespace": true,
+		"files.trimFinalNewlines": true,
+		"workbench.editor.enablePreview": false,
+		"html.format.indentInnerHtml": true,
+		"npm.packageManager": "pnpm",
+		"javascript.format.semicolons": "insert",
+		"js/ts.implicitProjectConfig.checkJs": true,
+		"js/ts.implicitProjectConfig.target": "ESNext",
+		"js/ts.implicitProjectConfig.strictNullChecks": true,
+		"typescript.format.semicolons": "insert",
+		"typescript.preferences.importModuleSpecifier": "relative"
+	}
+}
