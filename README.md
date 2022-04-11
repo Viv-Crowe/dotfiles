@@ -1,16 +1,41 @@
 # Dotfiles
 
-## TODO
+## Installation
 
-- put user.js automatically in the correct folder
-- paste Quokka + Wallaby license into .quokka/.qlc and .wallaby/key.lic
-- handle ssh keys and .ssh/config
+1. Make sure you have git installed. On MacOS, run: `sudo xcode-select --install;`
+2. run `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/DragosRotaru/dotfiles/master/.dotfiles/install.sh)"`
+3. run provision_mac.sh <username> <User Name> <password
 
-# Bootstrap
+## Next Steps
 
-- install git
-- run `git clone --bare https://github.com/DragosRotaru/dotfiles.git "$HOME/.cfg"`
-- run `echo ".cfg" >> .gitignore` (im not entirely sure if this is necessary)
-- run `git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout`
-- run `source .bash_profile`
-- run `dotfiles config --local status.showUntrackedFiles no`
+These are things I have not automated yet or cannot automate:
+
+### Security and Privacy
+
+- setup VPN
+- setup firewall (Lulu, Little Snitch, etc)
+- set inactivity logout/sleep settings
+- make sure location services are disabled
+- double check settings to make sure they applied to both users
+
+### UI
+
+- turn on dark mode
+- turn on night shift
+- show battery percentage
+- remove siri from touch bar
+- limit spotlight search results
+
+### Misc
+
+Configure Firefox:
+
+- copy user.js to FireFox profile folder: $HOME/Library/Application Support/Firefox/Profiles/xxxxx.default
+- install extensions listed in .dotfiles/extensions.firefox
+- set default web browser to Firefox (System Preferences > General)
+- import your Bookmarks
+
+Other software:
+
+- install Quokka/Wallaby key: `install_wallaby_key <your_key>` (utilities.sh)
+- install desired applications (see .dotfiles/applications.md)
