@@ -4,7 +4,7 @@
 
 1. Make sure you have git installed. On MacOS, run: `sudo xcode-select --install;`
 2. run `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/DragosRotaru/dotfiles/master/.dotfiles/install.sh)"`
-3. run provision_mac.sh <username> <User Name> <password
+3. run `provision_mac.sh <username> <User Name> <password>`
 
 ## Next Steps
 
