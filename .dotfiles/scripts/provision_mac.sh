@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# shellcheck disable=SC1091
-source utilities.sh
-
 # This script must be run in system recovery mode to temporarly bypass system integrity protection (SIP)
 # $1 - username
 # $2 - User Name
@@ -15,7 +12,7 @@ sudo -v;
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo "updating macOS and App Store applications. restart may be required";
-update_mac;
+./update_mac.sh;
 
 echo "installing XCode command line tools";
 sudo xcode-select --install;
@@ -28,31 +25,28 @@ sudo softwareupdate --schedule OFF;
 sudo osascript -e 'tell application "System Preferences" to quit';
 
 echo "configuring security";
-configure_mac_security "networked-device";
+./configure_mac_security.sh "networked-device";
 
 echo "installing and updating Brew";
-install_brew;
-update_brew;
+./install_brew.sh;
+./update_brew.sh;
 
 echo "upgrading Bash to the latest version";
-upgrade_bash;
+./upgrade_mac_system_bash.sh;
 
-echo "installing Visual Studio Code";
-brew install --cask visual-studio-code;
-
-echo "installing FireFox";
-brew install --cask firefox;
+echo "installing Applications with Brew";
+./install_brew_applications.sh
 
 echo "configuring admin user";
-configure_mac_user;
+./configure_mac_user.sh;
 
 echo "creating a non-admin user";
-create_mac_user "$1" "$2" "$3";
+./create_mac_user.sh "$1" "$2" "$3";
 
 echo "initializing dotfile for non-admin user";
-sudo -u "$1" -c "$(curl -fsSL https://raw.githubusercontent.com/DragosRotaru/dotfiles/master/.dotfiles/install.sh)";
+sudo -u "$1" -c "$(curl -fsSL https://raw.githubusercontent.com/DragosRotaru/dotfiles/master/.dotfiles/srcipts/install.sh)";
 
 echo "configuring non-admin user";
-sudo -u "$1" -c configure_mac_user;
+sudo -u "$1" -c ./configure_mac_user.sh;
 
 sudo softwareupdate --schedule ON;

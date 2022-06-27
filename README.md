@@ -1,5 +1,13 @@
 # Dotfiles
 
+This repository automates all provisioning, configuration, backup and versioning tasks
+related to all linux or macOS systems under my control. It provides many features:
+
+- full configuration of a brand new MacOS system (see `scripts/*mac*.sh`)
+- tracking of every application or package on every machine.
+- backup and sync of all dotfiles, config, addons and extensions on every system.
+- automated backup and updates
+
 ## Installation
 
 1. Make sure you have git installed. On MacOS, run: `sudo xcode-select --install;`
