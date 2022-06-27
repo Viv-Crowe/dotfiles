@@ -8,6 +8,10 @@ related to all linux or macOS systems under my control. It provides many feature
 - backup and sync of all dotfiles, config, addons and extensions on every system.
 - automated backup and updates
 
+## Forking
+
+Before running the installation instructions, I recommend forking this repo and changing the url below to point to your own repo. Another url to change is in the `provision_mac.sh` script.
+
 ## Installation
 
 1. Make sure you have git installed. On MacOS, run: `sudo xcode-select --install;`

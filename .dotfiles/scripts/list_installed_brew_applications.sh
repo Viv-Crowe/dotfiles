@@ -1,3 +1,4 @@
 #!/bin/bash
 
-brew list --versions;
+# brew deps --installed --tree;
+# TODO needs to be filtereds
