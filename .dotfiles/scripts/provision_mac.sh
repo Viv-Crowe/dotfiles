@@ -44,7 +44,7 @@ echo "creating a non-admin user";
 ./create_mac_user.sh "$1" "$2" "$3";
 
 echo "initializing dotfile for non-admin user";
-sudo -u "$1" -c "$(curl -fsSL https://raw.githubusercontent.com/DragosRotaru/dotfiles/master/.dotfiles/srcipts/install.sh)";
+sudo -u "$1" -c "$(curl -fsSL https://raw.githubusercontent.com/Viv-Crowe/dotfiles/master/.dotfiles/srcipts/install.sh)";
 
 echo "configuring non-admin user";
 sudo -u "$1" -c ./configure_mac_user.sh;
