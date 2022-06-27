@@ -2,7 +2,7 @@
 
 # Download the dotfiles repo
 
-git clone --bare https://github.com/DragosRotaru/dotfiles.git "$HOME/.cfg";
+git clone --bare https://github.com/Viv-Crowe/dotfiles.git "$HOME/.cfg";
 
 echo ".cfg" >> .gitignore;
 
