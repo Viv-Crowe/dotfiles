@@ -15,7 +15,7 @@ Before running the installation instructions, I recommend forking this repo and 
 ## Installation
 
 1. Make sure you have git installed. On MacOS, run: `sudo xcode-select --install;`
-2. run `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Viv-Crowe/dotfiles/master/.dotfiles/install.sh)"`
+2. run `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Viv-Crowe/dotfiles/master/.dotfiles/scripts/install.sh)"`
 3. run `provision_mac.sh <username> <User Name> <password>`
 
 ## Next Steps
